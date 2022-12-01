@@ -17,7 +17,7 @@ st.write("# Dog Breed Classifier")
 st.markdown('By <a href="https://github.com/omenxuinsgd" target="_blank">Nur Rokhman</a>' , unsafe_allow_html=True)
 
 st.write("Proyek ini mengklasifikasikan foto anjing menggunakan CNN yang disetel dengan baik dari ResNet-50 di fastai.")
-with st.beta_expander("🧙 Click here for more info about the model 🔮"):
+with st.beta_expander("🧙 Klik di sini untuk info lebih lanjut tentang model 🔮"):
     st.markdown("""
         <p>Proyek ini menggunakan pembelajaran transfer (transfer learning) untuk membuat CNN yang telah dilatih sebelumnya di ImageNet, menggunakan
         arsitektur ResNet-50. Implementasi dilakukan menggunakan fastai (v2) dan PyTorch.
@@ -38,7 +38,7 @@ with st.beta_expander("🧙 Click here for more info about the model 🔮"):
         <p>Kode yang digunakan untuk melatih model tersedia di <a href="https://github.com/omenxuinsgd/dogclassifier-cnn-streamlit" target="_blank">https://github.com/omenxuinsgd/dogclassifier-cnn-streamlit</a>.</p>
     """, unsafe_allow_html=True)
 
-file_data = st.file_uploader("Select an image", type=["jpg", "jpeg", "png"])
+file_data = st.file_uploader("Pilih sebuah gambar", type=["jpg", "jpeg", "png"])
 
 
 def download_file(url):
