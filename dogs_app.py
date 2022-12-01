@@ -19,23 +19,23 @@ st.markdown('By <a href="https://github.com/omenxuinsgd" target="_blank">Nur Rok
 st.write("Proyek ini mengklasifikasikan foto anjing menggunakan CNN yang disetel dengan baik dari ResNet-50 di fastai.")
 with st.beta_expander("🧙 Click here for more info about the model 🔮"):
     st.markdown("""
-        <p>This project used transfer learning to build a CNN pre-trained on ImageNet, using
-        a ResNet-50 architecture. The implementation was done using fastai (v2) and PyTorch. 
-        The training dataset was based on the <a href="https://www.akc.org/dog-breeds/" target="_blank">AKC-recognized dog breeds</a>, 
-        with approximately 150 images per dog breed taken from the internet. (An earlier iteration of 
-        this project used the <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank">Stanford dogs dataset</a>, 
-        but I found that the images in that dataset were not representative of images "in the wild", as the 
-        same model trained on those images gave unrealistically high accuracies but did not generalize well.)</p>
+        <p>Proyek ini menggunakan pembelajaran transfer (transfer learning) untuk membuat CNN yang telah dilatih sebelumnya di ImageNet, menggunakan
+        arsitektur ResNet-50. Implementasi dilakukan menggunakan fastai (v2) dan PyTorch.
+        Dataset pelatihan didasarkan pada <a href="https://www.akc.org/dog-breeds/" target="_blank">AKC-recognized dog breeds</a>, 
+        dengan sekitar 150 gambar per jenis anjing yang diambil dari internet. (Iterasi sebelumnya dari
+        proyek ini menggunakan <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank">Stanford dogs dataset</a>, 
+        tetapi saya menemukan bahwa gambar dalam kumpulan data itu tidak mewakili gambar "di alam liar", seperti
+        model yang sama yang dilatih pada gambar tersebut memberikan akurasi tinggi yang tidak realistis tetapi tidak menggeneralisasi dengan baik.)</p>
 
-        <p>10% of the data were set aside for the test set (holdout set), and 20% of the data
-        were used for the validation set. Images were resized to 128x128 pixel squares before
-        training using random-resize cropping.</p>
+        <p>10% dari data disisihkan untuk set pengujian (holdout set), dan 20% dari data
+        digunakan untuk set validasi. Gambar diubah ukurannya menjadi kotak 128x128 piksel sebelumnya
+        pelatihan menggunakan pemotongan ukuran acak.</p>
 
-        <p>The final model was trained for a total of 8 epochs: 3 with the ResNet layers frozen,
-        training only the new classification head, and 5 additional epochs with all layers unfrozen.
-        The final <b>validation set accuracy was 76.3%</b>, and the <b>test set/holdout accuracy was 75.4%</b>.</p>
+        <p>Model terakhir dilatih untuk total 8 zaman: 3 dengan lapisan ResNet dibekukan,
+        hanya melatih kepala klasifikasi baru, dan 5 zaman tambahan dengan semua lapisan dicairkan.
+        <b>Akurasi set validasi terakhir adalah 76,3%</b>, dan <b>akurasi set/holdout pengujian adalah 75,4%</b>.</p>
 
-        <p>The code used to train the model is available at <a href="https://github.com/willjobs/dog-classifier" target="_blank">https://github.com/willjobs/dog-classifier</a>.</p>
+        <p>Kode yang digunakan untuk melatih model tersedia di <a href="https://github.com/omenxuinsgd/dogclassifier-cnn-streamlit" target="_blank">https://github.com/omenxuinsgd/dogclassifier-cnn-streamlit</a>.</p>
     """, unsafe_allow_html=True)
 
 file_data = st.file_uploader("Select an image", type=["jpg", "jpeg", "png"])
@@ -121,7 +121,7 @@ if file_data is not None:
                         '</tr>'
         out_text += '</table><br><br>'
 
-        st.write('## What the model thinks')
+        st.write('## Apa yang model pikirkan')
         st.markdown(out_text, unsafe_allow_html=True)
 
-        st.write(f"🤔 Don't see your dog breed? For a full list of dog breeds in this project, [click here](https://htmlpreview.github.io/?https://github.com/willjobs/dog-classifier/blob/main/dog_breeds.html).")
+        st.write(f"🤔 Tidak melihat ras anjing Anda? Untuk daftar lengkap ras anjing dalam proyek ini, [klik di sini](https://htmlpreview.github.io/?https://github.com/willjobs/dog-classifier/blob/main/dog_breeds.html).")
