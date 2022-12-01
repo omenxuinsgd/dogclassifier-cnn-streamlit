@@ -14,9 +14,9 @@ st.set_page_config(
 )
 
 st.write("# Dog Breed Classifier")
-st.markdown('By <a href="https://willjobs.com" target="_blank">Will Jobs</a>' , unsafe_allow_html=True)
+st.markdown('By <a href="https://github.com/omenxuinsgd" target="_blank">Nur Rokhman</a>' , unsafe_allow_html=True)
 
-st.write("This project classifies dog photos using a CNN fine-tuned from ResNet-50 in fastai.")
+st.write("Proyek ini mengklasifikasikan foto anjing menggunakan CNN yang disetel dengan baik dari ResNet-50 di fastai.")
 with st.beta_expander("🧙 Click here for more info about the model 🔮"):
     st.markdown("""
         <p>This project used transfer learning to build a CNN pre-trained on ImageNet, using
